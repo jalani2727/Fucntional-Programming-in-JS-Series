@@ -23,7 +23,7 @@ function loadImage(url) {
       reject(new Error(msg))
     }
 
-    image.src = url
+    image.src = url // This promise is a "container" for this value. This value is the data you will use in the future.
 
   })
 }
