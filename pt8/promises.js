@@ -27,7 +27,7 @@ Promise.allSettled([ // This method is useful here because we have a bunch of pr
     if (result.status === "fulfilled"){
         addImg(result.value.src) // Promise.allSettled provides the result structure that would indicate that you would use result.value - Console logging this would reveal it but just try to remember this.
     } else {
-        console.log(`Image ${index} failed: `, result.reason) // Promise.allSettled provides the result structure that would indicate that you would use result.reason - Console logging this would reveal it but just try to remember this.
+        console.log(`Image ${index + 1} failed: `, result.reason) // Promise.allSettled provides the result structure that would indicate that you would use result.reason - Console logging this would reveal it but just try to remember this.
     }
   })
 }).catch((error) => {
