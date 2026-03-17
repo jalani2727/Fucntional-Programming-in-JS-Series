@@ -9,6 +9,7 @@
     "watch": "node --watch"
   },
   "dependencies": {
+    "highland": "^2.13.5",
     "lodash-es": "^4.17.23"
   },
   "devDependencies": {
