@@ -1,6 +1,6 @@
 // A stream is a concept.
 
-// Its how you would describe some model that processes data over a period rather than all at once
+// Its how you would describe some model that processes data over a period rather than all at once. Metaphor: A barrel of data reaches the end of the river and a bunch of stuff happens to it, then the next barrel of data, and then the next barrell.
 
 // Example:
 
@@ -40,3 +40,7 @@ highland(fs.createReadStream('data/customers.csv', 'utf8')) // The csv is "strea
 .filter(customer => customer.value > 2) // Only show customers with a value attribute over 2
 .map(customer => customer.name) // transform the result of the filter into an array
 .each(x => console.log('each: ', x, typeof(x))) // show end result in console.
+
+// Are streams functors? - YES
+
+// They wrap the values that flow in over time, they have a .map() method, and they return another stream
